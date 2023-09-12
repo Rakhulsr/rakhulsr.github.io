@@ -1,0 +1,300 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,300;1,700&display=swap');
+
+:root{
+  --primaryTextColor:#1c1c25;
+  --subTextColor:#7c7c8d;
+
+  --borderColor:#dcdcea;
+  --lineColor:#bcbcc6;
+
+  --primaryBackgroundColor:#e5e5e5;
+  --secondaryBackgroundColor:#dedddd;
+  --thirdBackgroundColor:#e3e3f0;
+
+  --primaryIconColor:#a181e3;
+  --primaryIconColorHover:#9892c1;
+
+  --sectionPadding: 6rem 0;
+
+  --itemBorderRadius: 0.7rem;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+.FYI {
+  text-align: center;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif ;
+}
+
+p, h1, h2, h3, h4, h5, h6, strong {
+  color: var(--primaryTextColor);
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.9rem;
+}
+
+p, span, label, input, textarea  {
+  color: var(--subTextColor)
+}
+
+a {
+  text-decoration: none;
+}
+
+.main-container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 1200px) {
+  .main-container{
+    width: 90%;
+  }
+}
+
+
+/* Titles */
+.section-title {
+  margin: 1rem 0 4rem;
+  font-size: 2rem;
+
+}
+
+.pre-title {
+  text-transform: uppercase;
+  letter-spacing: .4rem;
+  color: var(--subTextColor);
+  position: relative;
+  padding: 15px;
+  width: fit-content;
+  font-weight: 400;
+  font-size: .9rem;
+}
+
+.pre-title::before {
+  content:"";
+  width: 9px;
+  height: 1px;
+  background: var(--lineColor);
+  position: absolute;
+  display: block;
+  left: 0;
+  top: 50%;
+}
+
+/* Layout */
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 3rem;
+}
+
+
+
+/* Button */
+.btn {
+  padding: 0.65rem 1.3rem;
+  background:white ;
+  border: 1.5px solid var(--borderColor);
+  cursor: pointer;
+  transition: .2s ease-in-out;
+}
+
+.btn:hover {
+  box-shadow: rgba(0, 0, 0, 0.05) 1.5px 3px 5px;
+}
+
+
+/* Logo nd Menu Navigasi */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 0;
+  
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 3rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-weight: 900;
+  font-size: 2.2rem;
+}
+
+.logo a{
+  color: var(--primaryTextColor);
+}
+
+.navbar ul li{
+  display: flex;
+  align-items: center;  
+}
+
+.navbar ul li a {
+  color: var(--primaryTextColor);
+}
+
+/* Menu Burger */
+.menu-burger div{
+  width: 25px;
+  height: 2px;
+  background-color: #000;
+  margin: 7px;
+  transition: all .3s;
+  z-index: 99;
+}
+
+.menu-burger {
+  display:none;
+  z-index: 99;
+  position: fixed;
+  top: 33px;
+  right: 35px;
+}
+
+/* hero section */
+#hero {
+  height: 660px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+} 
+
+.hero-name {
+  font-size: 3rem;
+  font-weight: 700;
+  margin: .5rem 0 1rem;
+}
+
+.hero-name span{
+  color:var(--primaryIconColor)
+}
+
+.hero-right {
+  width: 90%;
+}
+
+.hero-right {
+  display: flex;
+  justify-content: center;
+}
+
+
+/* LAYANAN */
+#services {
+  background-color: var(--secondaryBackgroundColor);
+  padding:var(--sectionPadding);
+}
+
+.services .pre-title {
+  margin: 0rem auto ;
+}
+
+.services-title {
+  text-align: center;
+
+}
+
+.Layanan {
+  padding: 3rem 2rem;
+  text-align: center;
+  background-color: var(--primaryBackgroundColor);
+  border-radius: var(--itemBorderRadius);
+}
+
+.ikon-layanan {
+  background: var(--thirdBackgroundColor);
+  width: fit-content;
+  margin: 0rem auto;
+  padding: 1rem 1.3rem;
+  border-radius: 0.5rem;
+}
+
+.ikon-layanan svg {
+  fill: var(--primaryIconColor);
+
+}
+
+/* Portfolios */
+
+#portfolios {
+  padding: var(--sectionPadding);
+}
+
+.portfolio {
+  border-radius: var(--itemBorderRadius);
+  overflow: hidden;
+}
+
+.portfolio-cover {
+  height: 250px; 
+  width: fit-content;
+}
+
+.portfolio-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.portfolio-info {
+  padding: 2rem 1.5rem;
+}
+
+
+.portfolio-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.portfolio h4 {
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
+.portfolio-title a svg:hover {
+  fill: var(--primaryIconColor);
+}
+
+.portfolio-title a svg {
+  transition: .2s ease-in-out;
+}
+
+.portfolio-tags {
+  display: flex;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.portfolio-tags div{
+  font-size: 0.9rem;
+  border: 1px solid var(--borderColor);
+  padding: 0.4rem 1rem;
+  color: var(--subTextColor)
+  
+}
+
+
+
+ 
