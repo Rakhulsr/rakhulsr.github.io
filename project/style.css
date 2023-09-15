@@ -23,11 +23,6 @@ html {
   scroll-behavior: smooth;
 }
 
-
-.FYI {
-  text-align: center;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -294,6 +289,64 @@ a {
   color: var(--subTextColor)
   
 }
+
+/* contact session  */
+
+#contact {
+  padding : var(--sectionPadding)
+}
+
+.form {
+  max-width: 90%; 
+  margin: 0; 
+  padding: 1.5rem;
+  border-radius: var(--itemBorderRadius);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form p {
+  margin-top: 1rem;
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
+.form input, .form textarea {
+  width: calc(100% - 20px); 
+  padding: 23px;
+  margin-top: 10px;
+  border: 1px solid var(--borderColor);
+  border-radius: var(--itemBorderRadius);
+  box-sizing: border-box;
+  font-size: 0.9rem;
+}
+
+.form input[type="submit"] {
+  display: block;
+  width: auto;
+  padding: 12px 30px;
+  margin-top: 10px;
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 1.05rem; 
+  border-radius: var(--itemBorderRadius); 
+}
+
+.form input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+
+@media screen and (max-width: 600px) {
+  .form input[type="submit"] {
+    width: 100%;
+  }
+}
+
+
+
+
+
 
 
 
